@@ -1,0 +1,16 @@
+server:
+  port: 4000
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/employee
+    username: wcrs
+    password: wcrs
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      format_sql: true
+    show-sql: true
+    database: POSTGRESQL
