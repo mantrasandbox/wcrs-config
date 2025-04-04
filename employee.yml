@@ -14,3 +14,9 @@ spring:
       format_sql: true
     show-sql: true
     database: POSTGRESQL
+
+
+  eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8765/eureka/
