@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://wcrs-db:5433/employee
+    url: jdbc:postgresql://wcrs-db:5432/employee
     username: wcrs
     password: wcrs
     driver-class-name: org.postgresql.Driver
