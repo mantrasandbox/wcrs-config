@@ -15,7 +15,17 @@ spring:
     show-sql: true
     database: POSTGRESQL
 
+  boot:
+    admin:
+      client:
+        url: http://admin:9090
+        enabled: true
+        auto-registration: true
+        instance:
+          name: ${spring.application.name:JSS}
+
 eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery:8761/eureka/
+      
