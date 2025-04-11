@@ -28,7 +28,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: *
+        include: auditevents,beans,caches,env,health,httpexchanges,info,loggers,mentrics,mappings,sessions,shutdown,threaddump
   endpoint:
     health:
       show-details: always
