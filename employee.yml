@@ -14,16 +14,7 @@ spring:
       format_sql: true
     show-sql: true
     database: POSTGRESQL
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health, info, metrics
-  endpoint:
-    health:
-      show-details: always
-      
+     
   boot:
     admin:
       client:
@@ -33,6 +24,14 @@ management:
         instance:
           name: ${spring.application.name:JSS}
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics
+  endpoint:
+    health:
+      show-details: always
 eureka:
   client:
     serviceUrl:
