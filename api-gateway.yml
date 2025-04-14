@@ -6,28 +6,28 @@ spring:
           uri: http://auth-services:4001
           predicates:
             - Path=/auth/**
-          filters:
+          #filters:
             #- StripPrefix=1
 
         - id: admin-service-routes
           uri: http://admin:9090
           predicates:
             - Path=/admin/**
-          filters:
+          #filters:
             #- StripPrefix=1
 
         - id: pgadmin-service-routes
           uri: http://ms_pgadmin:80
           predicates:
             - Path=/pgadmin/**
-          filters:
+          #filters:
             #- StripPrefix=1
 
         - id: employee-service-routes
           uri: http://employee:4000
           predicates:
             - Path=/api/v1/employees/**
-          filters:
+          #filters:
             #- StripPrefix=1
             #- RedirectTo=301, 
             
@@ -35,7 +35,7 @@ spring:
           uri: http://kibana:5601
           predicates:
             - Path=/kibana/**
-          filters:
+          #filters:
             #- StripPrefix=1
             #- RedirectTo=301, 
             
@@ -43,7 +43,7 @@ spring:
           uri: http://discovery:8761
           predicates:
             - Path=/discovery/**
-          filters:
+          #filters:
             #- StripPrefix=1
             #- RedirectTo=301, 
 server:
