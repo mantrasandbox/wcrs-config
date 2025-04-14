@@ -38,6 +38,15 @@ spring:
           filters:
             #- StripPrefix=1
             #- RedirectTo=301, 
+            
+        - id: discovery-service-routes
+          uri: http://discovery:8761
+          predicates:
+            - Path=/discovery/**
+          filters:
+            #- StripPrefix=1
+            #- RedirectTo=301, 
+            
 eureka:
   client:
     serviceUrl:
