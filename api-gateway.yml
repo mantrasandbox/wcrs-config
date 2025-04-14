@@ -46,7 +46,8 @@ spring:
           filters:
             #- StripPrefix=1
             #- RedirectTo=301, 
-            
+server:
+  port: 4040
 eureka:
   client:
     serviceUrl:
