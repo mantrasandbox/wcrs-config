@@ -30,3 +30,7 @@ spring:
           filters:
             - StripPrefix=1
             #- RedirectTo=301, 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/
