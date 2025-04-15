@@ -1,5 +1,5 @@
 spring:
-  config:
+  cloud:
     gateway:
       routes:
         - id: auth-service-routes
