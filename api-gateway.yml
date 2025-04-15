@@ -15,6 +15,7 @@ spring:
            - Path=/admin/**
           filters:
            - StripPrefix=1
+           - RewritePath=/admin(?<segment>/?.*), /$\{segment}
 
         #- id: pgadmin-service-routes
          # uri: http://ms_pgadmin:80
@@ -45,7 +46,7 @@ spring:
             - Path=/discovery/**
           filters:
             - StripPrefix=1
-            #- RedirectTo=301, 
+            - RewritePath=/discovery(?<segment>/?.*), /$\{segment} 
 server:
   port: 4040
 eureka:
