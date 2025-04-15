@@ -24,7 +24,7 @@ spring:
             #- StripPrefix=1
 
         - id: employee-service-routes
-         uri: http://employee:4000
+          uri: http://employee:4000
           predicates:
            - Path=/api/v1/employees/**
           # filters:
@@ -42,7 +42,7 @@ spring:
         - id: discovery-service-routes
           uri: http://discovery:8761
           predicates:
-            - Path= discovery/**
+            - Path=/discovery/**
           #filters:
             #- StripPrefix=1
             #- RedirectTo=301, 
