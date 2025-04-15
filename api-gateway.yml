@@ -38,7 +38,7 @@ spring:
            - Path=/kibana/**
           filters:
            - StripPrefix=1
-           - RewritePath=/kibana(?<segment>/?.*), /$\{segment} 
+           - RewritePath=/kibana(?<segment>/?.*), /${segment} 
             
         - id: discovery-service-routes
           uri: http://discovery:8761
