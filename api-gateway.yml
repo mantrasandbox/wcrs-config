@@ -32,12 +32,12 @@ spring:
            - StripPrefix=1
            - RedirectTo=301, 
             
-        - id: kibana-service-routes
-          uri: http://kibana:5601
-          predicates:
-           - Path=/kibana/**
-          filters:
-           - StripPrefix=1
+        #- id: kibana-service-routes
+          #uri: http://kibana:5601
+          #predicates:
+          # - Path=/kibana/**
+          #filters:
+          # - StripPrefix=1
             #- RedirectTo=301, 
             
         - id: discovery-service-routes
