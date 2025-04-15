@@ -39,6 +39,7 @@ spring:
           filters:
            - StripPrefix=1
            - RewritePath=/kibana(?<segment>/?.*), /${segment} 
+           - AddResponseHeader=Content-Security-Policy, script-src 'self' 'unsafe-inline'
             
         - id: discovery-service-routes
           uri: http://discovery:8761
