@@ -30,7 +30,6 @@ spring:
            - Path=/api/v1/employees/**
           filters:
            - StripPrefix=1
-           - RedirectTo=301, 
             
         - id: kibana-service-routes
           uri: http://kibana:5601
@@ -38,7 +37,6 @@ spring:
             - Path=/kibana/**
           filters:
             - StripPrefix=1
-            #- RedirectTo=301, 
             
         - id: discovery-service-routes
           uri: http://discovery:8761
