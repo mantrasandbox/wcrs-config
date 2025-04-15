@@ -17,19 +17,20 @@ spring:
            - StripPrefix=1
            - RewritePath=/admin(?<segment>/?.*), /$\{segment}
 
-        # - id: pgadmin-service-routes
-        #   uri: http://ms_pgadmin:80
-        #   predicates:
-        #    - Path=/pgadmin/**
-        #   filters:
-        #    - StripPrefix=1
+        - id: pgadmin-service-routes
+          uri: http://ms_pgadmin:80
+          predicates:
+           - Path=/pgadmin/**
+          filters:
+           - StripPrefix=1
+           - RewritePath=/pgadmin(?<segment>/?.*), /$\{segment} 
 
         - id: employee-service-routes
           uri: http://employee:4000
           predicates:
            - Path=/api/v1/employees/**
           filters:
-           - StripPrefix=1
+           #- StripPrefix=1
             
         - id: kibana-service-routes
           uri: http://kibana:5601
@@ -37,6 +38,7 @@ spring:
             - Path=/kibana/**
           filters:
             - StripPrefix=1
+            - RewritePath=/kibana(?<segment>/?.*), /$\{segment} 
             
         - id: discovery-service-routes
           uri: http://discovery:8761
