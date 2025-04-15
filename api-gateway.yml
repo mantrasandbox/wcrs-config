@@ -17,13 +17,13 @@ spring:
            - StripPrefix=1
            - RewritePath=/admin(?<segment>/?.*), /$\{segment}
 
-        - id: pgadmin-service-routes
-          uri: http://ms_pgadmin:80
-          predicates:
-           - Path=/pgadmin/**
-          filters:
-           - StripPrefix=1
-           - RewritePath=/pgadmin(?<segment>/?.*), /$\{segment} 
+        # - id: pgadmin-service-routes
+        #   uri: http://ms_pgadmin:80
+        #   predicates:
+        #    - Path=/pgadmin/**
+        #   filters:
+        #    - StripPrefix=1
+        #    - RewritePath=/pgadmin(?<segment>/?.*), /$\{segment} 
 
         - id: employee-service-routes
           uri: http://employee:4000
