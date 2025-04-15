@@ -9,40 +9,40 @@ spring:
           #filters:
             #- StripPrefix=1
 
-        - id: admin-service-routes
-          uri: http://admin:9090
-          predicates:
-            - Path=/admin/**
+        #- id: admin-service-routes
+         # uri: http://admin:9090
+          #predicates:
+           # - Path=/admin/**
           #filters:
             #- StripPrefix=1
 
-        - id: pgadmin-service-routes
-          uri: http://ms_pgadmin:80
-          predicates:
-            - Path=/pgadmin/**
+        #- id: pgadmin-service-routes
+         # uri: http://ms_pgadmin:80
+          #predicates:
+           # - Path=/pgadmin/**
           #filters:
             #- StripPrefix=1
 
-        - id: employee-service-routes
-          uri: http://employee:4000
-          predicates:
-            - Path=/api/v1/employees/**
+        #- id: employee-service-routes
+         # uri: http://employee:4000
+          #predicates:
+           # - Path=/api/v1/employees/**
           #filters:
             #- StripPrefix=1
             #- RedirectTo=301, 
             
-        - id: kibana-service-routes
-          uri: http://kibana:5601
-          predicates:
-            - Path=/kibana/**
+        #- id: kibana-service-routes
+         # uri: http://kibana:5601
+          #predicates:
+           # - Path=/kibana/**
           #filters:
             #- StripPrefix=1
             #- RedirectTo=301, 
             
-        - id: discovery-service-routes
-          uri: http://discovery:8761
-          predicates:
-            - Path=/discovery/**
+        #- id: discovery-service-routes
+          #uri: http://discovery:8761
+          #predicates:
+            #- Path=/discovery/**
           #filters:
             #- StripPrefix=1
             #- RedirectTo=301, 
