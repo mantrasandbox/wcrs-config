@@ -47,6 +47,7 @@ spring:
           filters:
            - StripPrefix=1
            - RewritePath=/discovery(?<segment>/?.*), /$\{segment} 
+           - RewritePath=/eureka(?<segment>/?.*), /$\{segment}
 server:
   port: 4040
 eureka:
