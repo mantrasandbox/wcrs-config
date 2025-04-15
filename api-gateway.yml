@@ -23,13 +23,13 @@ spring:
           #filters:
             #- StripPrefix=1
 
-        #- id: employee-service-routes
-         # uri: http://employee:4000
-          #predicates:
-           # - Path=/api/v1/employees/**
-          #filters:
-            #- StripPrefix=1
-            #- RedirectTo=301, 
+        - id: employee-service-routes
+         uri: http://employee:4000
+          predicates:
+           - Path=/api/v1/employees/**
+          # filters:
+          #   - StripPrefix=1
+          #   - RedirectTo=301, 
             
         #- id: kibana-service-routes
          # uri: http://kibana:5601
