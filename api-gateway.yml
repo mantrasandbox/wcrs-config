@@ -13,8 +13,8 @@ spring:
           uri: http://admin:9090
           predicates:
            - Path=/admin/**
-          # filters:
-          #   - StripPrefix=1
+          filters:
+           - StripPrefix=1
 
         #- id: pgadmin-service-routes
          # uri: http://ms_pgadmin:80
@@ -43,8 +43,8 @@ spring:
           uri: http://discovery:8761
           predicates:
             - Path=/discovery/**
-          #filters:
-            #- StripPrefix=1
+          filters:
+            - StripPrefix=1
             #- RedirectTo=301, 
 server:
   port: 4040
