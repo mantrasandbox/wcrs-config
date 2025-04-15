@@ -29,24 +29,24 @@ spring:
           uri: http://employee:4000
           predicates:
            - Path=/api/v1/employees/**
-          filters:
+          #filters:
            #- StripPrefix=1
             
         - id: kibana-service-routes
           uri: http://kibana:5601
           predicates:
-            - Path=/kibana/**
+           - Path=/kibana/**
           filters:
-            - StripPrefix=1
-            - RewritePath=/kibana(?<segment>/?.*), /$\{segment} 
+           - StripPrefix=1
+           - RewritePath=/kibana(?<segment>/?.*), /$\{segment} 
             
         - id: discovery-service-routes
           uri: http://discovery:8761
           predicates:
-            - Path=/discovery/**
+           - Path=/discovery/**
           filters:
-            - StripPrefix=1
-            - RewritePath=/discovery(?<segment>/?.*), /$\{segment} 
+           - StripPrefix=1
+           - RewritePath=/discovery(?<segment>/?.*), /$\{segment} 
 server:
   port: 4040
 eureka:
