@@ -7,12 +7,15 @@ spring:
     username: wcrs
     password: wcrs
     driver-class-name: org.postgresql.Driver
+    initialization-mode: always #Disable in production
+    data: classpath:data.sql #Disable in production
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
       dialect: org.hibernate.dialect.PostgreSQLDialect
       format_sql: true
     show-sql: true
+    defer-datasource-initialization: true #Disable in production
     database: POSTGRESQL
      
   output:
