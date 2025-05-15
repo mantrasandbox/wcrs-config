@@ -2,6 +2,10 @@ server:
   port: 4000
 
 spring:
+  kafka:
+    producer:
+      value-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
   datasource:
     url: jdbc:postgresql://wcrs-db:5432/employee
     username: wcrs
