@@ -41,14 +41,14 @@ spring:
            - RewritePath=/kibana(?<segment>/?.*), /${segment} 
            - AddResponseHeader=Content-Security-Policy, script-src 'self' 'unsafe-inline'
             
-        - id: discovery-service-routes
-          uri: http://discovery:8761
-          predicates:
-           - Path=/discovery/**
-          filters:
-           - StripPrefix=1
-           - RewritePath=/discovery(?<segment>/?.*), /$\{segment} 
-           - RewritePath=/eureka(?<segment>/?.*), /$\{segment}
+        # - id: discovery-service-routes
+        #   uri: http://discovery:8761
+        #   predicates:
+        #    - Path=/discovery/**
+        #   filters:
+        #    - StripPrefix=1
+        #    - RewritePath=/discovery(?<segment>/?.*), /$\{segment} 
+        #    - RewritePath=/eureka(?<segment>/?.*), /$\{segment}
 server:
   port: 4040
 # eureka:
