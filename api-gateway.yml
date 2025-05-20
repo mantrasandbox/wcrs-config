@@ -51,7 +51,7 @@ spring:
            - RewritePath=/eureka(?<segment>/?.*), /$\{segment}
 server:
   port: 4040
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://discovery:8761/eureka/
+# eureka:
+#   client:
+#     serviceUrl:
+#       defaultZone: http://discovery:8761/eureka/
