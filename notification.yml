@@ -55,3 +55,5 @@ rabbitmq:
     email: email.queue
   routing-keys:
     email: routing.email
+
+SENDGRID_API_KEY: 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
