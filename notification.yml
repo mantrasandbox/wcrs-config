@@ -4,8 +4,8 @@ server:
 spring:
   kafka:
     consumer:
-      value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeSerializer
-      key-deserializer: org.apache.kafka.common.serialization.StringDeSerializer
+      value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
   rabbitmq:
     addresses: localhost:5672
   datasource:
