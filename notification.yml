@@ -11,7 +11,7 @@ spring:
     username: guest
     password: guest
   datasource:
-    url: jdbc:postgresql://localhost:5432/notification
+    url: jdbc:postgresql://localhost:63858/notification
     username: wcrs
     password: wcrs
     driver-class-name: org.postgresql.Driver
