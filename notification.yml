@@ -6,6 +6,8 @@ spring:
     consumer:
       value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeSerializer
       key-deserializer: org.apache.kafka.common.serialization.StringDeSerializer
+  rabbitmq:
+    addresses: localhost:5672
   datasource:
     url: jdbc:postgresql://wcrs-db:5432/notification
     username: wcrs
@@ -43,8 +45,11 @@ management:
   endpoint:
     health:
       show-details: always
-# eureka:
-#   client:
-#     serviceUrl:
-#       defaultZone: http://discovery:8761/eureka/
       
+rabbitmq:
+  exchanges:
+    direct: direct.exchange
+  queues:
+    email: email.queue
+  routing-keys:
+    email: routing.email
