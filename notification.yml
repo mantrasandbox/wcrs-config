@@ -7,11 +7,11 @@ spring:
       value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
   rabbitmq:
-    addresses: amqp://localhost:5672
+    addresses: localhost:5672
     username: guest
     password: guest
   datasource:
-    url: jdbc:postgresql://wcrs-db:5432/notification
+    url: jdbc:postgresql://localhost:5432/notification
     username: wcrs
     password: wcrs
     driver-class-name: org.postgresql.Driver
