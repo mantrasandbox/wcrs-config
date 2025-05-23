@@ -1,0 +1,45 @@
+server:
+  port: 4002
+
+spring:
+  kafka:
+    producer:
+      value-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+  datasource:
+    url: jdbc:postgresql://wcrs-db:5432/inventory
+    username: wcrs
+    password: wcrs
+    driver-class-name: org.postgresql.Driver
+    initialization-mode: always #Disable in production
+    data: classpath:data.sql #Disable in production
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      format_sql: true
+    show-sql: true
+    defer-datasource-initialization: true #Disable in production
+    database: POSTGRESQL
+     
+  output:
+    ansi:
+      enabled: always
+      
+  boot:
+    admin:
+      client:
+        url: http://admin:9090
+        enabled: true
+        auto-registration: true
+        instance:
+          name: ${spring.application.name:JSS}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: auditevents,beans,caches,env,health,httpexchanges,info,loggers,metrics,mappings,sessions,shutdown,threaddump,headdump
+  endpoint:
+    health:
+      show-details: always
