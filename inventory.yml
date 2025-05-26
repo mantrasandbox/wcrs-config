@@ -26,20 +26,20 @@ spring:
     ansi:
       enabled: always
       
-  boot:
-    admin:
-      client:
-        url: http://admin:9090
-        enabled: true
-        auto-registration: true
-        instance:
-          name: ${spring.application.name:JSS}
+#   boot:
+#     admin:
+#       client:
+#         url: http://admin:9090
+#         enabled: true
+#         auto-registration: true
+#         instance:
+#           name: ${spring.application.name:JSS}
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: auditevents,beans,caches,env,health,httpexchanges,info,loggers,metrics,mappings,sessions,shutdown,threaddump,headdump
-  endpoint:
-    health:
-      show-details: always
+# management:
+#   endpoints:
+#     web:
+#       exposure:
+#         include: auditevents,beans,caches,env,health,httpexchanges,info,loggers,metrics,mappings,sessions,shutdown,threaddump,headdump
+#   endpoint:
+#     health:
+#       show-details: always
