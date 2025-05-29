@@ -19,7 +19,7 @@ spring:
     data: classpath:init.sql #Disable in production
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
       dialect: org.hibernate.dialect.PostgreSQLDialect
       format_sql: true
     show-sql: true
