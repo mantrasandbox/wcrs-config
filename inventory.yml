@@ -12,10 +12,10 @@ spring:
     password: wcrs
     driver-class-name: org.postgresql.Driver
     initialization-mode: always #Disable in production
-    data: classpath:data.sql #Disable in production
+    data: classpath:init.sql #Disable in production
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: none
       dialect: org.hibernate.dialect.PostgreSQLDialect
       format_sql: true
     show-sql: true
