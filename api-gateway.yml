@@ -31,7 +31,21 @@ spring:
            - Path=/api/v1/employees/**
           #filters:
            #- StripPrefix=1
-            
+           
+        - id: inventory-service-routes
+          uri: http://inventory:4002
+          predicates:
+           - Path=/api/v1/inventory/**
+          #filters:
+           #- StripPrefix=1
+
+        - id: recipe-service-routes
+          uri: http://recipe:4003
+          predicates:
+           - Path=/api/v1/recipe/**
+          #filters:
+           #- StripPrefix=1
+        
         - id: kibana-service-routes
           uri: http://kibana:5601
           predicates:
